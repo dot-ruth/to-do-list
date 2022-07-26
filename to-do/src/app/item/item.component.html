@@ -2,8 +2,8 @@
     <input type="checkbox" [id]="Item.description"  (change)="Item.done = !Item.done" [checked]="Item.done">
     <label [for]="Item.description">{{Item.description}}</label>
     <div class="btn-wrapper" *ngIf="!editable">
-        <button class="btn" (click)="editable=!editable">Edit</button>
-        <button mat-btn-warn (click)="remove.emit()">delete</button>
+        <button class="btn" mat-button color="warn" (click)="editable=!editable">Edit</button>
+        <button mat-button color="warn" (click)="remove.emit()">delete</button>
     </div>
     <div *ngIf="editable">
         <input type="text" [value]="Item.description" #editedItem (keyup.enter)="saveitem(editedItem.value)">
