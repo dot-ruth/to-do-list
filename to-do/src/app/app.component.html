@@ -14,8 +14,7 @@
   <ng-template #elseBlock>items</ng-template></h2>
   
   <ul>
-    <li *ngFor="let item of items">
-      <app-item (remove)="remove(item)" [Item]="item"></app-item>
+    <li *ngFor="let item of items"><app-item (remove)="remove(item)" [Item]="item"></app-item>
     </li>
   </ul>
 </div>

@@ -25,6 +25,6 @@ export class AppComponent {
     });
   }
   remove(item){
-    this.allItems.slice(this.allItems.indexOf(item),1)
+    this.allItems.slice(this.allItems.indexOf(item))
   }
 }
